@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ez="http://xmlns.jcp.org/jsf/composite/ezcomp">
+<h:head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <h:outputStylesheet library="css" name="style.css"/>
+  <title>Facelets Template</title>
+</h:head>
+<h:body>
+<div id="header" class="header">
+  <ui:insert name="header">HEADER</ui:insert>
+  <div id="compositeComponent">
+    <ez:template-header />
+  </div>
+</div>
+<div class="row" style="padding:20px;margin-top:30px;">
+  <div id="content" class="col-9">
+    <ui:insert name="content">MAIN CONTENT</ui:insert>
+  </div>
+</div>
+<div id="footer" class="footer">
+  <ui:insert name="footer">FOOTER</ui:insert>
+  <div id="compositeComponent">
+    <ez:template-footer />
+  </div>
+</div>
+</h:body>
+</html>
